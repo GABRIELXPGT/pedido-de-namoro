@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedido de namoro</title>
+</head>
+<h1 class=" titulo"> Quer namorar comigo? </h1>
+<a href=""><button class="sim" onclick="clica()"> Sim </button> </a>
+<button class="não" onmouseenter="passou()" onclick="clicou()"> Não</button>
+<style>
+    .titulo {
+        font: normal 30pt verdana;
+        text-align: center;
+        color: blueviolet;
+
+    }
+
+    .sim {
+        font: normal 30pt verdana;
+        background-color: aquamarine;
+        background: #ffc0cb;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 5;
+        position: relative;
+        top: 30%;
+        left: 30%;
+        border-color: #ffc0cb;
+    }
+
+    .não {
+        font: normal 30pt verdana;
+        background-color: aquamarine;
+        background: pink;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 5;
+        transform: translate(50%);
+        position: absolute;
+        top: 11, 5%;
+        left: 50%;
+        border-color: #ffc0cb;
+    }
+</style>
+
+<body>
+    <script>
+        function clica() {
+            alert('favela venceu!!!😎')
+        }
+        function passou() {
+            var trot = window.document.getElementsByClassName("não")[0];
+            trot.style = 'absolute'
+            trot.style.bottom = gerarposição(10, 90);
+            trot.style.left = gerarposição(10, 90);
+        }
+        function gerarposição(min, max) {
+            return (Math.random() * (max - min) + min) + "%"
+        }
+        function clicou() {
+            var trot = window.document.getElementsByClassName("não")[0];
+            trot.style = 'absolute'
+            trot.style.bottom = gerarposição(20, 80);
+            trot.style.left = gerarposição(20, 80);
+        }
+        function gerarposição(min, max) {
+            return (Math.random() * (max - min) + min) + "%"
+        }
+
+
+    </script>
+</body>
+
+</html>
